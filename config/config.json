@@ -1,0 +1,50 @@
+{
+    "name":"A",
+	"type":"factor",
+	"input":[
+		{
+			"db":"basic_data_db",
+			"group_name":"input_group1",
+			"sources":[
+				{
+					"table":"it_ck_test_2.input1",
+					"columns":[
+						"value"
+					]
+				},
+				{
+					"table":"it_ck_test_2.input2",
+					"columns":[
+						"value"
+					]
+				}
+			],
+			"start_time":"-1814400",
+			"end_time":"schedule_now"
+		}
+	],
+	"output":[
+		{
+			"group_name":"output_group1",
+			"fields":[
+				"output1",
+				"output2"
+			],
+			"category_1":"first level",
+			"category_2":"A",
+			"category_3":"",
+			"description":"输出测试第一组"
+		}
+	],
+
+	"history":{
+		"external_source":"A.py",
+		"mode":"batch"
+	},
+
+	"schedule":"****-**-** **:*/2:00",
+
+	"computation":{
+		"external_source":"A.py"
+	}
+}
